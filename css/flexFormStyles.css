@@ -1,0 +1,711 @@
+/*No Flexform CSS */
+.formDescription {
+/*    width: 60%;   */
+    border: solid 1px grey;
+    margin: auto;
+    background-color: lightgrey;
+    padding: 10px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+
+/*********************************************************************
+Flexform Styles SCSS: 
+This section contains basic styling along with special classes that 
+can be used to improve the look and feel of HTML5 forms.  This styling
+addresses all HTML5 Form tags and elements.
+-----------------------------------------------------------------------
+TABLE OF CONTENTS:
+
+    1 Base flexform stylings (Base styles don't require use of special flexform classes)
+        - Base flexform Styling for input elements
+        - Base flexform styling for input elements on HOVER
+        - Base flexform styling for input elements on FOCUS
+        - Base flexform styling for: Label,legends, fieldsets,
+                optgroup tags/properties
+        - Base flexform styling for checkboxes and radio buttons
+        - Flexform Button Styling:
+            - Base flexform styling for all buttons types; 
+            - Flexform styling for buttons on HOVER;
+            - Flexform styling for buttons on FOCUS;
+ 
+    2 Special flexform styling classes
+        - Documentation for: "flexform-frame" class
+        - Documentation for: "flexform-title" class
+        - Documentation for: "flexform-group" class
+        - Documentation for: "flexform-stacked" class
+        - Documentation for: "flexform-fullstacked" class
+
+*********************************************************************/
+
+
+/*-------------------------------------------------------------------
+    - Base flexform Styling for input elements 
+--------------------------------------------------------------------*/
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input:not([type]),
+
+/* type attribute not specified in markup */
+
+input[type=""],
+
+/* type attribute specified but empty */
+
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="time"],
+input[type="file"],
+input[type="month"],
+input[type="range"],
+input[type="week"],
+input[type="month"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+keygen,
+datalist,
+output {
+    /*    display: block;*/
+    color: #5f5f5f;
+    box-sizing: border-box;
+    min-width: 5em;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 2em;
+}
+
+select {
+    /*    display: block;*/
+    background-color: #ffffff;
+    color: #5f5f5f;
+    box-sizing: border-box;
+    min-width: 5em;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 5px 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+textarea {
+    color: #5f5f5f;
+    box-sizing: border-box;
+    min-width: 5em;
+    min-height: 5em;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    font: normal 13px sans-serif;
+    padding: 5px;
+    border: 1px solid #dbdbdb;
+    resize: vertical;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/*-------------------------------------------------------------------
+    - Base flexform styling for input elements on HOVER  
+--------------------------------------------------------------------*/
+
+input[type="email"]:hover,
+input[type="number"]:hover,
+input[type="search"]:hover,
+input[type="text"]:hover,
+input:not([type]):hover,
+
+/* type attribute not specified in markup */
+
+input[type=""]:hover,
+
+/* type attribute specified but empty */
+
+input[type="tel"]:hover,
+input[type="url"]:hover,
+input[type="password"]:hover,
+input[type="checkbox"]:hover,
+input[type="radio"]:hover,
+input[type="time"]:hover,
+input[type="file"]:hover,
+input[type="month"]:hover,
+input[type="range"]:hover,
+input[type="week"]:hover,
+keygen:hover,
+datalist:hover,
+output:hover,
+textarea:hover,
+select:hover {
+    border: 1px solid grey;
+    color: grey;
+    outline: 0;
+    cursor: pointer;
+}
+
+/*-------------------------------------------------------------------
+    - Base flexform styling for input elements on FOCUS  
+--------------------------------------------------------------------*/
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input:not([type]):focus, /* type attribute not specified in markup */
+input[type=""]:focus, /* type attribute specified but empty */
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus,
+input[type="time"]:focus,
+input[type="file"]:focus,
+input[type="month"]:focus,
+input[type="range"]:focus,
+input[type="week"]:focus,
+keygen:focus,
+datalist:focus,
+output:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid grey;
+    color: grey;
+    outline: 0;
+    cursor: pointer;
+}
+
+
+/*-------------------------------------------------------------------
+    - Base flexform styling for: Label,legends, fieldsets, optgroup tags/properties 
+
+--------------------------------------------------------------------*/
+
+label,
+legend {
+    display: inline-block;
+    margin-top: .4em;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1em;
+    vertical-align: top;
+    width: inherit;
+    border-bottom: none;
+    padding-right: 1em;
+}
+
+fieldset {
+    padding: .5em .625em .75em;
+    margin: 0 2px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+/*    min-width: 15em;*/
+}
+
+optgroup {
+    background-color: #dbdbdb;
+}
+
+option {
+    background-color: #ffffff;
+}
+
+
+/*-------------------------------------------------------------------
+    - Base flexform styling for checkboxes and radio buttons
+--------------------------------------------------------------------*/
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
+
+
+/*-------------------------------------------------------------------
+    Flexform Button Styling:
+        - Base flexform styling for all buttons types; 
+        - Flexform styling for buttons on HOVER;
+        - Flexform styling for buttons on FOCUS;
+--------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+ - Base flexform styling for all buttons types; 
+--------------------------------------------------------------------*/
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    /*    display: block;*/
+    background-color: grey;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    font-weight: 400;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: .5em 1em;
+    border: 0;
+/*    margin: 1em 0;*/
+    border-radius: 4px;
+}
+
+
+/*-------------------------------------------------------------------
+- Flexform styling for buttons on HOVER;
+--------------------------------------------------------------------*/
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+    color: #ffffff;
+    background-color: black;
+    border-color: black;
+    cursor: pointer;
+}
+
+
+/*-------------------------------------------------------------------
+- Flexform styling for buttons on FOCUS;
+--------------------------------------------------------------------*/
+
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+    color: #FFF;
+    background-color: lightgrey;
+    border-color: lightgrey;
+}
+
+
+/* Form element spacing*/
+/*
+button {
+  margin-bottom: 1em; 
+}
+
+input,
+textarea,
+select,
+fieldset
+{
+  margin-bottom: 1em;
+}
+form {
+  margin-bottom: 2.0em; 
+}
+*/
+
+
+/********************************************************************** 
+Documentation for: "flexform-frame" class
+***********************************************************************
+Purpose: To provide a "frame" for the form and center it in that "frame".                       
+What: Sets a width for the "frame" (i.e., 60%), Creates a border of the "frame",
+sets padding and margins and centers form content within the "frame".
+How to use: Simply add class="flexform-frame" to the <form> element
+Example:  
+    <form class="flexform-frame">
+    .....
+    </form>
+Note: Form frame is designed to take up 60% of page/container...that sizing 
+can be changed easily by overriding max-width of class to some other value
+e.g., 50%
+**************************************************************************/
+
+.flexform-frame {
+/*    max-width: 60%;*/
+    padding: 0 1em 1em 1em;
+    margin: 0 -15px 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    margin: auto
+}
+
+/********************************************************************** 
+Documentation for: "flexform-title" class
+***********************************************************************
+Purpose: Allows the user to add a title to a form. This title will be 
+centered horizontally within the form "frame" and a double lined divider
+will be added to separate the header from the main form elements.
+How to apply: Within the <form> tag you will need to add a div. Within
+that div add the title of your choice within the header tag of your choice
+(i.e., h1 - h6); 
+
+Code Example:
+<form class="flexform-frame">
+    <div class="flexform-title" >
+        <h1>Contact us </h1> 
+    </div>
+</form>
+
+Notes: 
+This class requires the use the "flexform-frame" class on the form
+tag. 
+
+*/
+
+.flexform-title h1,
+.flexform-title h2,
+.flexform-title h3,
+.flexform-title h4,
+.flexform-title h5,
+.flexform-title h6 {
+    text-align: center;
+}
+
+.flexform-title h1:after,
+.flexform-title h2:after,
+.flexform-title h3:after,
+.flexform-title h4:after,
+.flexform-title h5:after,
+.flexform-title h6:after {
+    padding-bottom: .5em;
+    content: '';
+    display: block;
+    border-bottom: 2px double grey;
+    ;
+}
+
+
+/********************************************************************** 
+Documentation for: "flexform-group" class
+***********************************************************************
+Purpose: Used to provide some simple spacing between "form groups". 
+(i.e., "form group" comprised of "label" & inpupt element pairs 
+(e.g.,<input>, <textArea>, <select>). 
+How:  It does so by providing a margin-bottom to the "form groups".                                            
+How to apply: Apply the "class=flexform-group" to wrapping div 
+Code Example: 
+<div class="flexform-group" >
+    <label>Name</label>
+    <input type="text">
+</div>
+Notes:   
+**************************************************************************/
+
+.flexform-group {
+    margin-bottom: 1em;
+}
+
+/********************************************************************** 
+Documentation for: "flexform-stack" class
+***********************************************************************
+Purpose: Forces form elements to appear on separate line from it's label
+(i.e., "stacked"). Input elements like text fields, textArea, etc are 
+given a default width of 15em so that the right edges line up.  
+
+How to apply: Apply class="flexform-stacked" directly to form element
+rather than to the wrapping <div> or it's <label>. 
+
+Code Example: 
+<div class="flexform-group" >
+    <label>Name</label>
+    <input class="flexform-stack" type="text">
+</div>
+Notes: 
+*/
+
+.flexform-stack {
+    display: block;
+}
+
+/********************************************************************** 
+Documentation for: "flexform-stack-fullwidth" class
+***********************************************************************
+Purpose: Forces form elements to appear on separate line from it's label
+(i.e., "stacked") AND forces the element to fill 100% of the form width
+less any margins and paddings applied to the form.  
+How to apply: Apply class="flexform-fullstacked" directly to form element
+rather than to the wrapping <div> or it's <label>. 
+
+Code Example: 
+<div class="flexform-group" >
+    <label>Name</label>
+    <input class="flexform-stack-fullwidth" type="text">
+</div>
+Notes: 
+From a styling perspective this should only be applied to form elements
+that you want to span the entire width of the form (e.g., input elements) AND
+that you want stacked under their label.
+If you only want form elements stacked then you use class="flexform-stacked".
+*/
+
+.flexform-stack-fullwidth {
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .flexform-horizontal label {
+        display: block;
+        padding-left: 0;
+    }
+}
+
+/* Horizontal Form Element Styling*/
+@media (min-width: 768px) {
+    .flexform-horizontal .flexform-labelAdjacent-right {
+        padding-top: 1em;
+        margin-bottom: 0;
+        text-align: right;
+    }
+}
+
+@media (min-width: 768px) {
+    .flexform-horizontal .flexform-labelAdjacent-left {
+        padding-top: 1em;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    
+
+
+
+.radio,
+.checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.radio label,
+.checkbox label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"]
+{
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -20px;
+}
+
+.flexform-horizontal button,
+.flexform-horizontal input[type="submit"],
+.flexform-horizontal input[type="reset"],
+.flexform-horizontal input[type="button"] {
+    background-color: grey;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    font-weight: 400;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: .5em 1em;
+    border: 0;
+    border-radius: 4px;
+    margin-top: .5em;
+}
+
+.flexform-horizontal input[type="email"],
+.flexform-horizontal input[type="number"],
+.flexform-horizontal input[type="search"],
+.flexform-horizontal input[type="text"],
+.flexform-horizontal input:not([type]),
+.flexform-horizontal input[type=""],
+.flexform-horizontal input[type="email"],
+.flexform-horizontal input[type="number"],
+.flexform-horizontal input[type="search"],
+.flexform-horizontal input[type="text"],
+.flexform-horizontal input:not([type]),
+.flexform-horizontal input[type=""],
+.flexform-horizontal input[type="tel"],
+.flexform-horizontal input[type="url"],
+.flexform-horizontal input[type="password"],
+.flexform-horizontal input[type="time"],
+.flexform-horizontal input[type="file"],
+.flexform-horizontal input[type="month"],
+.flexform-horizontal input[type="range"],
+.flexform-horizontal input[type="week"],
+.flexform-horizontal input[type="month"],
+.flexform-horizontal input[type="color"],
+.flexform-horizontal input[type="date"],
+.flexform-horizontal input[type="datetime"],
+.flexform-horizontal input[type="datetime-local"],
+.flexform-horizontal keygen,
+.flexform-horizontal datalist,
+.flexform-horizontal output {    
+    color: #5f5f5f;
+    box-sizing: border-box;    
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 2em;
+    margin-top: .8em;   
+}
+
+/*-------------------------------------------------------------------
+    - Base flexform styling for input elements on HOVER  
+--------------------------------------------------------------------*/
+
+.flexform-horizontal input[type="email"]:hover,
+.flexform-horizontal input[type="number"]:hover,
+.flexform-horizontal input[type="search"]:hover,
+.flexform-horizontal input[type="text"]:hover,
+.flexform-horizontal input:not([type]):hover,
+
+/* type attribute not specified in markup */
+
+.flexform-horizontal input[type=""]:hover,
+
+/* type attribute specified but empty */
+
+.flexform-horizontal input[type="tel"]:hover,
+.flexform-horizontal input[type="url"]:hover,
+.flexform-horizontal input[type="password"]:hover,
+.flexform-horizontal input[type="checkbox"]:hover,
+.flexform-horizontal input[type="radio"]:hover,
+.flexform-horizontal input[type="time"]:hover,
+.flexform-horizontal input[type="file"]:hover,
+.flexform-horizontal input[type="month"]:hover,
+.flexform-horizontal input[type="range"]:hover,
+.flexform-horizontal input[type="week"]:hover,
+.flexform-horizontal keygen:hover,
+.flexform-horizontal datalist:hover,
+.flexform-horizontal output:hover,
+.flexform-horizontal textarea:hover,
+.flexform-horizontal select:hover {
+    border: 1px solid grey;
+    color: grey;
+    outline: 0;
+    cursor: pointer;
+}
+
+.flexform-horizontal input[type="email"]:focus,
+.flexform-horizontal input[type="number"]:focus,
+.flexform-horizontal input[type="search"]:focus,
+.flexform-horizontal input[type="text"]:focus,
+.flexform-horizontal input:not([type]):focus,
+
+/* type attribute not specified in markup */
+
+.flexform-horizontal input[type=""]:focus,
+
+/* type attribute specified but empty */
+
+.flexform-horizontal input[type="tel"]:focus,
+.flexform-horizontal input[type="url"]:focus,
+.flexform-horizontal input[type="password"]:focus,
+.flexform-horizontal input[type="checkbox"]:focus,
+.flexform-horizontal input[type="radio"]:focus,
+.flexform-horizontal input[type="time"]:focus,
+.flexform-horizontal input[type="file"]:focus,
+.flexform-horizontal input[type="month"]:focus,
+.flexform-horizontal input[type="range"]:focus,
+.flexform-horizontal input[type="week"]:focus,
+.flexform-horizontal keygen:focus,
+.flexform-horizontal datalist:focus,
+.flexform-horizontal output:focus,
+.flexform-horizontal textarea:focus,
+.flexform-horizontal select:focus {
+    border: 1px solid grey;
+    color: grey;
+    outline: 0;
+    cursor: pointer
+}
+
+
+.flexform-horizontal select {
+    /*    display: block;*/
+    background-color: #ffffff;
+    color: #5f5f5f;
+    box-sizing: border-box;
+    min-width: 5em;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 5px 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: .75em;
+}
+
+.flexform-horizontal textarea {
+    /*    display: block;*/
+    background-color: #ffffff;
+    color: #5f5f5f;
+    box-sizing: border-box;
+    min-width: 5em;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 5px 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: .75em;
+    min-height: 5em;
+}
+
+/*-------------------------------------------------------------------
+- Flexform styling for buttons on HOVER;
+--------------------------------------------------------------------*/
+
+.flexform-horizontal button:hover,
+.flexform-horizontal input[type="submit"]:hover,
+.flexform-horizontal input[type="reset"]:hover,
+.flexform-horizontal input[type="button"]:hover {
+    color: #ffffff;
+    background-color: black;
+    border-color: black;
+    cursor: pointer;
+}
+
+/*-------------------------------------------------------------------
+- Flexform styling for buttons on FOCUS;
+--------------------------------------------------------------------*/
+
+.flexform-horizontal button:focus,
+.flexform-horizontal input[type="submit"]:focus,
+.flexform-horizontal input[type="reset"]:focus,
+.flexform-horizontal input[type="button"]:focus {
+    color: #FFF;
+    background-color: lightgrey;
+    border-color: lightgrey;
+}
+
+.flexform-horizontal label,
+.flexform-horizontal legend {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;    
+/*    vertical-align: top;*/
+/*    width: inherit;*/
+    border-bottom: none;
+    height: inherit;
+}
+
+
+/* Align radio buttons and checkboxes with right side */
+.flexform-horizontal .radio {
+    margin-left: -15px;
+}
+
+.flexform-horizontal .checkbox {
+    margin-left: -15px;    
+}
+
+.flexform-horizontal fieldset {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/*fieldset legend .radio,*/
+
+.flexform-horizontal fieldset .radio,
+.flexform-horizontal fieldset .checkbox
+{
+    margin-left: 0;
+}

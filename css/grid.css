@@ -1,0 +1,102 @@
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+/*  padding: 0 20px;*/
+  box-sizing: border-box; 
+}
+._12 {
+    width: 100%;
+    float: left;
+    padding: 0 2%;
+    box-sizing: border-box;
+}
+.offset {
+    display:none;
+}
+
+/* For devices larger than 480px */
+@media (min-width: 480px) {
+    
+    .container {
+        width: 90%;
+        
+    }
+    ._12 {
+        padding: 0 2%;
+    }
+    
+/*Grid between 480px & 768px*/
+  ._1._12                    { width: 100%; }
+  ._2._12                    { width: 100%; }
+  ._3._12                    { width: 100%; }    
+  ._4._12                    { width: 100%; }    
+  ._5._12                    { width: 100%; }    
+  ._6._12                    { width: 100%; }
+  ._7._12                    { width: 100%; }
+  ._8._12                    { width: 100%; }
+  ._9._12                    { width: 100%; }
+  ._10._12                   { width: 100%; }
+  ._11._12                   { width: 100%; }
+  ._12                       { width: 100%; }  
+}
+
+/* For devices larger than 768px */
+@media (min-width: 768px) {
+  
+  ._1._12                    { width: 50%; }
+  ._2._12                    { width: 50%; }
+  ._3._12                    { width: 50%; }
+  ._4._12                    { width: 50%; }
+  ._5._12                    { width: 50%; }
+  ._6._12                    { width: 50%; }
+  ._7._12                    { width: 50%; }
+  ._8._12                    { width: 50%; }
+  ._9._12                    { width: 50%; }
+  ._10._12                   { width: 50%; }
+  ._11._12                   { width: 50%; }
+  ._12                       { width: 50%; }
+
+/*  Offsets:  attach to the grid classes
+    Example: ._3._12.offset
+    
+*/
+    .offset {
+        display: block;
+        min-height: 1px;
+    }
+    
+}
+
+/* For devices larger than 960px */
+@media (min-width: 960px) {
+  .container {
+    width: 95%; 
+  }
+  ._12 {
+    padding: 0 3%; 
+  }
+  
+  ._1._12                    { width: 8.33333333333%; }
+  ._2._12                    { width: 16.66666666667%; }
+  ._3._12                    { width: 25%;  }
+  ._4._12                    { width: 33.33333333333%; }
+  ._5._12                    { width: 41.66666666666%; }
+  ._6._12                    { width: 50%;  }
+  ._7._12                    { width: 58.33333333333%; }
+  ._8._12                    { width: 66.66666666667%; }
+  ._9._12                    { width: 75%;  }
+  ._10._12                   { width: 83.33333333333%; }
+  ._11._12                   { width: 91.66666666667%; }
+  ._12                       { width: 100%; }
+
+
+
+    
+    
+
+}

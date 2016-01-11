@@ -1,0 +1,165 @@
+html{
+    background-color: #ffffff;
+}
+
+.flexForm-basic {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 3em;
+    box-sizing: border-box;
+    background-color:  #f3f3f3;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    font: bold 14px sans-serif;
+    text-align: left;
+}
+
+.flexForm-basic .flexForm-row{
+    text-align: left;
+    margin-bottom: 1.5em;    
+}
+
+.flexForm-basic .flexForm-title-row{
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+/* The form title */
+
+.flexForm-basic h1{
+    display: inline-block;
+    box-sizing: border-box;
+    color:  #4c565e;
+    font-size: 24px;
+    padding: 0 10px 15px;
+    border-bottom: 2px solid dodgerblue;
+    margin: 0;
+}
+
+.flexForm-basic .flexForm-row > label span{
+    display: inline-block;
+    box-sizing: border-box;
+    color: #5F5F5F;
+    width: 180px;
+    text-align: right;
+    vertical-align: top;
+    padding: 12px 25px;
+}
+
+.flexForm-basic input{
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 240px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+}
+
+.flexForm-basic input[type=radio],
+.flexForm-basic input[type=checkbox]{
+    box-shadow: none;
+    width: auto;
+}
+
+.flexForm-basic input[type=checkbox]{
+    margin-top: 13px;
+}
+
+.flexForm-basic select{
+    background-color: #ffffff;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    max-width: 240px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px 8px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+}
+
+.flexForm-basic textarea{
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 240px;
+    height: 80px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    font: normal 13px sans-serif;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    resize: vertical;
+    border-radius: 4px;
+}
+
+.flexForm-basic .flexForm-radio-buttons{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.flexForm-basic .flexForm-radio-buttons > div{
+    margin-top: 10px;
+}
+
+.flexForm-basic .flexForm-radio-buttons label span{
+    margin-left: 8px;
+    color: #5f5f5f;
+    font-weight: normal;
+}
+
+.flexForm-basic .flexForm-radio-buttons input{
+    width: auto;
+}
+
+.flexForm-basic button{
+    display: block;
+    background-color: dodgerblue;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 14px 22px;
+    border: 0;
+    margin: 40px 183px 0;
+    border-radius: 4px;
+}
+
+/*	Making the form responsive. Remove this media query
+    if you don't need the form to work on mobile devices. */
+
+@media (max-width: 600px) {
+
+    .flexForm-basic{
+        padding: 30px;
+        max-width: 480px;
+    }
+
+    .flexForm-basic .flexForm-row{
+        max-width: 300px;
+        margin: 25px auto;
+        text-align: left;
+    }
+
+    .flexForm-basic .flexForm-title-row{
+        margin-bottom: 50px;
+    }
+
+    .flexForm-basic .flexForm-row > label span{
+        display: block;
+        text-align: left;
+        padding: 0 0 15px;
+    }
+
+    .flexForm-basic select{
+        width: 240px;
+    }
+
+    .flexForm-basic input[type=checkbox]{
+        margin-top:0;
+    }
+
+    .flexForm-basic .flexForm-radio-buttons > div{
+        margin: 0 0 10px;
+    }
+
+    .flexForm-basic button{
+        margin: 0;
+    }
+
+}

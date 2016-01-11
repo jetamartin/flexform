@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <!--    Bootstrap Edition -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>FlexForm Docs and Samples</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Bootstrap -->
+<!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <!---------------------------------------------------->
+
+    <!--    <link rel="stylesheet" href="css/normalize.css">-->
+    <!--    <link rel="stylesheet" href="css/skeleton.css">-->
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/flexFormStyles.css">
+    <!--    <link rel="stylesheet" href="css/styles.css">-->
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!--    <link rel="icon" type="image/png" href="images/favicon.png" />-->
+
+</head>
+
+<body>
+
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!--   Your framework defines styling for all form elements including text boxes, drop down lists, text areas, radio buttons, check boxes, fieldsets and labels, etc. Your form fields should have unique styling applied to them so that they do not look like the default form fields. This includes width, height, padding, shadows, and corner radius applied to elements that will accept these properties.-->
+<!************************************************************************************************************
+**************************************************************************************************************
+                                                              
+                                "BASE" FORM STYLES TEMPLATE
+                                
+**************************************************************************************************************                                
+************************************************************************************************************->
+
+<!-----------------------------------------------------------------------------------------------------------
+        Description of "Base" form styles 
+------------------------------------------------------------------------------------------------------------->
+ 
+<div class="container ">
+    <div class="row col-sm-12 flexform-frame">
+        <div class="formDescription">
+           <div class="flexform-title">
+                <h1 >Flex Form Base Styles</h1>
+            </div>
+            <div>
+                <p>This "Base Form Styles Template" primarily illustrates the default styling for <strong>HTML Form Elements</strong> that is available "out of the box" with Flex Framework (i.e., without the use of special Flex classes). Additionally a few "value add" Flex form features that do require special classes have been applied in this template to improve the overall visual display of the form elements. 
+                <p><strong>Flex form classes applied: </strong></p> 
+                <ul>
+                    <li><strong>flexform-frame</strong> - provides a bordered "frame" for the form elements. The "frame" containing the form elements is centered on the page and appropriate paddings and margins are applied to make the frame elements more presentable. This class is applied to a <code>div</code> that wraps the <code>form</code>. The width of the frame can be controlled by applying the approriate Flex grid column sizing class to the "wrapping" <code>div</code>. 
+                    </li>
+                    <li><strong>flexform-title</strong> - creates a title for the form and adds a separator below the title. To create the title you must add the title within a <code>header</code>(i.e., h1 - h6) tag and wrap that in a <code>div</code>.  The flexForm-title class is applied to the wrapping <code>div</code>. This wrapping <code>div</code> is inserted inside the form. 
+                    </li>
+                    <li><strong>flexform-group</strong> - provides vertical spacing (i.e. margin-top/bottom) between form element groups (i.e., label/input element). The form element group must be wrapped in a <code>div</code>. This class is applied to the wrapping <code>div</code>.                    
+                </ul>
+                <p><strong>Other Flex Classes Used:</strong></p>
+                <ul>
+                    <li><strong>Flex Grid Classes</strong> - the overall alignment and form width is controlled by applying the appropriate Flex Grid classes (e.g., columns and offset). See template below.
+                    
+                </ul>
+                <p><strong>Special Notes/Considerations:</strong></p>
+                <ul>
+                    <li>Input elements (e.g., input[type="text"], textArea, select, etc.) are assigned a default width of 15em's. The textArea is assigned a default height of 5ems. </li>
+                    <li>Open Issues:
+                        <ul>
+                            <li>Column offset - tried to use "col-sm-offset-x" to shift form to right but it's not working as expected. Need to investigate why</li>
+                        </ul>
+                    </li>                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+   
+    
+<div class="container flexform-frame">
+    <div class="row col-sm-12">
+        <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
+
+            <div class="flexform-title">
+                <h2>Flex Form Base Styles</h2>
+            </div>
+
+            <div class="flexform-group">
+                <label for="but">Button:</label>
+                <button id="but" type="submit" name="foo" value="bar">Submit</button>
+            </div>
+            
+            <div class="flexform-group">
+                <label for="f0">Reset button:</label>
+                <input id="f0" type="reset" name="reset" value="Reset">
+            </div>
+            
+            <div class="flexform-group">
+                <label for="f1">Single-line text input field:</label>
+                <input id="f1" name="text" value="Default text.">
+            </div>
+            
+            <div class="flexform-group">
+                <label for="f2">Multi-line text input (textarea):</label>
+                <textarea id="f2" name="textarea">Default text.
+                </textarea>
+            </div> 
+   
+            <div class="flexform-group">
+                <div>The following two radio buttons are inside a <code>fieldset</code> element with a <code>legend</code>:</div>
+                <fieldset>
+                    <legend>Legend</legend>
+                    <div class="radio">
+                        <label for="f3">
+                            <input id="f3" type="radio" name="radio" value="1"> Radio button 1</label>
+                    </div>
+                    <div class="radio">
+                        <label for="f4">
+                            <input id="f4" type="radio" name="radio" value="2" checked> Radio button 2 (initially checked)</label>
+                    </div>
+                </fieldset>
+            </div>
+            
+            <div class="flexform-group">
+                <fieldset>
+                    <legend>Check those that apply</legend>
+                    <div class="checkbox">
+                        <label for="f5">
+                            <input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="f6">
+                            <input id="f6" type="checkbox" name="checkbox2" checked> Checkbox 2 (initially checked)</label>
+                    </div>
+                </fieldset>
+            </div>
+            
+            <div class="flexform-group">
+                <label for="f10">Dropdown with <code>size=1</code></label>
+                <select id="f10" name="select1" size="1">:
+                    <optgroup label="First Group">
+                        <option>one
+                            <option>two
+                                <option>three
+                    </optgroup>
+                    <optgroup label="Second Group">
+                        <option>four
+                            <option>five
+                                <option>six
+                    </optgroup>
+                </select>
+            </div>
+            
+            <div class="flexform-group">
+                <label for="f11">A Listbox with <code>size=3</code>:
+                </label>
+                <select id="f11" name="select2" size="3">
+                    <option>one
+                        <option selected>two (default)
+                            <option>three
+                </select>
+            </div>
+
+            <div class="flexform-group">
+                <label for="f99">Submit button:</label>
+                <input id="f99" type="submit" name="submit" value="Submit">
+            </div>
+
+            <div class="flexform-group">
+                <label>Time</label>
+                <input type="time">
+            </div>
+            
+            <div class="flexform-group">
+                <label>URL</label>
+                <input type="url">
+            </div>
+
+            <div class="flexform-group">
+                <label>Week</label>
+                <input type="week">
+            </div>
+
+            <div class="flexform-group">
+                <label>Data List</label>
+                <input list="browsers" name="browser">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                        <option value="Firefox">
+                            <option value="Chrome">
+                                <option value="Opera">
+                                    <option value="Safari">
+                </datalist>
+            </div>
+
+            <div class="flexform-group">
+                Note: min-width doesn't seem to work properly with Keygen
+                <br>
+                <label>KeyGen</label>
+                <keygen name="security">
+            </div>
+
+            <div class="flexform-group">
+                <label>Output</label>
+                <output ></output>
+            </div>
+        </form>
+    </div>
+</div>
+
+<br><hr><br>
+
+<!************************************************************************************************************
+**************************************************************************************************************
+                                                              
+                                VERTICAL FORM TEMPLATE
+                                
+**************************************************************************************************************                                
+************************************************************************************************************->
+
+<!-----------------------------------------------------------------------------------------------------------
+        Description of Flex Vertical Form Template
+------------------------------------------------------------------------------------------------------------->
+<div class="container flexform-frame">
+    <div class="row col-sm-12">
+        <div class="formDescription">
+            <div class="flexform-title">
+                <h1>Flex Vertical Form Template:</h1>
+            </div>
+            <div>
+                <p>This form is an example of a "Vertical Form" format. "Vertical" meaning that the labels for form input elements are "stacked" 
+                    (vertically) directly above it's corresponding input element (excluding radio buttons and check boxes) rather than being placed adjacent to it on the same line. </p>
+                    <p><strong>Flex form classes applied to achieve this template:</strong></p> 
+                <ul>                  
+                    <li><strong>flexform-frame</strong> - creates a bordered "frame" that surrounds the form elements. </li>
+                    <li><strong>flexform-title</strong> - creates a title for the form and adds a separator below the title. To create the title you must add the title within a <code>header</code>(i.e., h1 - h6) tag and wrap that in a <code>div</code>.  The flexForm-title class is applied to the wrapping <code>div</code>. This wrapping <code>div</code> is inserted inside the form. 
+                    </li>
+                    <li><strong>flexform-group</strong> - provides margin separation between form element "groups" (i.e., label/input group). This class is added to the <code>div</code> that wraps each grouping of form elements.</li>
+                    <li><strong>flexform-stack</strong> - forces the form input element (e.g., button, textarea, text input, etc.) to appear below it's corresponding label (if present). This is class is only applied directly to the form element (not the label). </li>
+                    <li><strong>flexform-stack-fullwidth</strong> - this class performs the same function as "flexform-stack" class but additionally it forces the input element to fill 100% of the form width (i.e., width=100%;) less any margins and paddings applied to the form. This class should only be to form input element (not on its label). </li>                    
+                    <li><strong>flexform-radio</strong> - TBD</li>                    
+                </ul>
+                <p><strong>Other Flex Classes Used:</strong></p>
+                <ul>
+                    <li><strong>Flex Grid Classes</strong> - the overall alignment and width of the form is controlled by applying the appropriate Flex Grid classes (e.g., columns and offset). See template below.
+                    
+                </ul>
+                <p><strong>Special Notes/Considerations:</strong></p>
+                <ul>
+                    <li>None</li>                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<br> 
+
+<!-----------------------------------------------------------------------------------------------------------
+        Sample HTML for Vertical Form Template
+------------------------------------------------------------------------------------------------------------->    
+<div class="flexform-frame">
+
+       <div class="row ">
+
+<!--        <div class="flexform-frame">  // Alternative place you could place flexform--frame and get same result -->
+ 
+        <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
+
+            <div class="flexform-title">
+                <h2>Vertical Form Example</h2>                
+            </div>
+
+            <div class="flexform-group">
+                <label for="but">Button:</label>
+                <button class="flexform-stack" id="but" type="submit" name="foo" value="bar">Submit</button>
+            </div>
+            
+            <div class="flexform-group">
+                <label for="f0">Reset button:</label>
+                <input class="flexform-stack" id="f0" type="reset" name="reset" value="Reset">
+            </div>
+            
+            <div class="flexform-group">
+                <label for="f1">Single-line text input field:</label>
+                <input class="flexform-stack-fullwidth" id="f1" name="text" value="Default text.">
+            </div>
+            
+            <div class="flexform-group">
+                <label for="f2">Multi-line text input field (textarea):</label>
+                <textarea class="flexform-stack-fullwidth" id="f2" name="textarea">Default text.
+                </textarea>
+            </div>
+
+            <div class="flexform-group">
+                <div>The following two radio buttons are inside a <code>fieldset</code> element with a <code>legend</code>:</div>
+                <fieldset>
+                    <legend>Legend</legend>
+                    <div class="radio">
+                        <label for="f3">
+                            <input id="f3" type="radio" name="radio" value="1"> Radio button 1</label>
+                    </div>
+                    <div class="radio">
+                        <label for="f4">
+                            <input id="f4" type="radio" name="radio" value="2" checked> Radio button 2 (initially checked)</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="flexform-group">
+                <fieldset>
+                    <legend>Check those that apply</legend>
+                    <div class="checkbox">
+                        <label for="f5">
+                            <input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="f6">
+                            <input id="f6" type="checkbox" name="checkbox2" checked> Checkbox 2 (initially checked)</label>
+                    </div>
+                </fieldset>
+            </div>
+            
+            <div class="flexform-group">
+                <label for="f10">A <code>select</code> element with <code>size="1"</code> (dropdown box):</label>
+                <select class="flexform-stack-fullwidth" id="f10" name="select1" size="1">
+                    <optgroup label="First Group">
+                        <option>one
+                            <option>two
+                                <option>three
+                    </optgroup>
+                    <optgroup label="Second Group">
+                        <option>four
+                            <option>five
+                                <option>six
+                    </optgroup>
+                </select>
+            </div>
+            
+            <div class="flexform-group">
+                <label for="f11">A
+                    <code>select</code> element with <code>size="3"</code> (listbox):
+                </label>
+                <select class="flexform-stack-fullwidth" id="f11" name="select2" size="3">
+                    <option>one
+                        <option selected>two (default)
+                            <option>three
+                </select>
+            </div>
+
+            <div class="flexform-group">
+                <label for="f99">Submit button:
+                    <input class="flexform-stack" id="f99" type="submit" name="submit" value="Submit">
+                </label>
+            </div>
+            
+            <div class="flexform-group">
+                <label>Time</label>
+                <input class="flexform-stack-fullwidth" type="time">
+            </div>
+            
+            <div class="flexform-group">
+                <label>URL</label>
+                <input class="flexform-stack-fullwidth" type="url">
+            </div>
+
+            <div class="flexform-group">
+                <label>Week</label>
+                <input class="flexform-stack-fullwidth" type="week">
+            </div>
+
+            <div class="flexform-group">
+                <label>Data List</label>
+                <input class="flexform-stack-fullwidth" list="browsers" name="browser">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                        <option value="Firefox">
+                            <option value="Chrome">
+                                <option value="Opera">
+                                    <option value="Safari">
+                </datalist>
+            </div>
+
+            <div class="flexform-group">
+                Note: min-width doesn't seem to work properly with Keygen
+                <br>
+                <label>KeyGen</label>
+                <keygen class="flexform-stack-fullwidth" name="security">
+            </div>
+
+            <div class="flexform-group">
+                <label>Output</label>
+                <output class="flexform-stack-fullwidth"></output>
+            </div>
+            
+        </form>
+<!--       </div>-->
+    </div>
+</div>
+
+<br><hr><br>
+
+<!************************************************************************************************************
+**************************************************************************************************************
+                                                              
+                                HORIZONTAL FORM TEMPLATE
+                                
+**************************************************************************************************************                                
+************************************************************************************************************->
+
+<!-----------------------------------------------------------------------------------------------------------
+        Description of Horizontal Form Template
+------------------------------------------------------------------------------------------------------------->
+<div class="container flexform-frame">
+    <div class="row">
+        <div class="formDescription">
+            <div class="flexform-title">
+                <h2>Horizontal Form Example:</h2>
+            </div>
+            <div>
+                <p>This is an example of a "Horizontal" form. "Horizontal" means that the form labels are aligned adjacently on the same line as their correspoding form input element (vs being "stacked" on top of each other).
+                    <br> This "Horizontal" template is achieved by using a combination of special Flex Grid System classes, leveraging the "base" default styling inherent in the Flex framework and applying some of the flexform classes:</p>
+                <ul>
+                    <p><strong>The special Flex classes used to achieve this format are as follows:</strong></p>
+                                        
+                    <li><strong>flexform-frame</strong> - creates a "frame" for the form and centers the form elements in that "frame". </li>
+                    <li><strong>flexform-title</strong> - creates a title and separator for between the title and the form contents.</li>
+                    <li><strong>flexform-group</strong> - provides margin separation between form element groups (i.e., label/input group). </li>
+                    <li><strong>flexform-labelAdjacent-right</strong> - causes the label to align adjacent to it's corresponding input element and aligned on the right side of the label "column" (i.e., "text-align: right") </li>
+                    <li><strong>flexform-labelAdjacent-left</strong> - causes the label to align adjacent to it's corresponding input element and aligned on the left side of the label "column" (i.e., "text-align: right") </li> 
+                </ul>
+                </ul>
+                    <p><strong>Other Flex Classes Used:</strong></p>
+                <ul>
+                    <li><strong>Flex Grid Classes</strong> -   Besides being used to control the overall width and alignment of the form, the Flex Grid classes are used extensively within the form tag to establish the layout of the "Horizontal" frame. Specifically you will need to create a column for the label column (by applying a column width to each label) and a column for the input form elements (by applying a column width to each input element). You may also need to use column offsets for certain input elements like checkboxes and radio buttons given that the label typically is on the right side of the input element and you would typically want both it's label and it's input element (i.e., checkbox/radio button) to both appear entirely in the input form element column. (See example in template).                      
+                </ul>
+                <p><strong>Special Notes/Considerations:</strong></p>
+                <ul>
+                    <li>Open Issues:
+                        <ul>
+                            <li>"Horizontal" From is currently not responsive...probably need to add some media queries that would cause the "Horizontal" form to morph to a "Vertical" form when it reaches a specific width.</li>
+                        </ul>
+                    </li>                       
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<!-----------------------------------------------------------------------------------------------------------
+        Sample HTML for Horizontal Form Template
+------------------------------------------------------------------------------------------------------------->      
+    <div class="container flexform-frame">
+
+<!--        <div class="row">-->
+
+            <form class="flexform-horizontal" action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
+
+                <div class="flexform-title">
+                    <h2>Horizontal Form Template</h2>
+                </div>
+
+                <div class="flexform-group">
+                    <input type="hidden" name="hidden field" value="42"> This is a form containing various fields (with some initial values (defaults) set, so that you can see how input text looks like without actually typing it):
+                </div>
+                <div class="row flexform-group">
+                    <label class="_3 _12 flexform-labelAdjacent-right" for="but">Button:</label>
+                    <button class="" id="but" type="submit" name="foo" value="bar">Submit</button>
+                </div>
+                <div class="row flexform-group">
+                    <label class="_3 _12 flexform-labelAdjacent-right" for="f0">Reset button:</label>
+                    <input class="" id="f0" type="reset" name="reset" value="Reset">
+
+                </div>
+                <div class="row flexform-group">
+                    <label class="_3 _12 flexform-labelAdjacent-right" for="f1">Text Input</label>
+                    <input class="_8 _12" id="f1" name="text" value="Default text.">
+                </div>
+                <div class="row flexform-group">
+                    <label class="_3 _12 flexform-labelAdjacent-right" for="f2">Textarea Input:</label>
+                    <textarea class="_8 _12" id="f2" name="textarea">Default text.
+                    </textarea>
+                </div>
+
+                <div class="row flexform-group">         
+                    <div class="_3 _12 offset"></div>                    
+                    <div class="_8 _12 offset">
+                        <div>The following two radio buttons are inside a <code>fieldset</code> element with a <code>legend</code>:</div>
+                        <fieldset>
+                            <legend>Legend</legend>
+                            <div>
+                                <label for="f3">
+                                    <input id="f3" type="radio" name="radio" value="1"> Radio button 1</label>
+                            </div>
+                            <div>
+                                <label for="f4">
+                                <input id="f4" type="radio" name="radio" value="2" checked> Radio button 2 (initially checked)</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                
+                <div class="row flexform-group">
+                   <div class="_3 _12 offset"></div> 
+                    <div class="_8 _12">
+                        <fieldset>
+                            <legend>Check those that apply</legend>
+                            <div class="checkbox">
+                                <label for="f5">
+                                    <input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label>
+                            </div>
+                            <div class="checkbox">
+                                <label for="f6">
+                                    <input id="f6" type="checkbox" name="checkbox2" checked> Checkbox 2 (initially checked)</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                
+                <div class="row flexform-group"> 
+                        <label class="_3 _12 flexform-labelAdjacent-right" for="f10">Dropdown box</label>
+                        <select class="_8 _12" id="f10" name="select1" size="1">
+                            <optgroup label="First Group">
+                                <option>one
+                                    <option>two
+                                        <option>three
+                            </optgroup>
+                            <optgroup label="Second Group">
+                                <option>four
+                                    <option>five
+                                        <option>six
+                            </optgroup>
+                        </select>                     
+                </div>
+                <div class="row flexform-group">
+                 
+                    <label class="_3 _12 flexform-labelAdjacent-right" for="f11">Listbox</label>
+                    <select class="_8 _12" id="f11" name="select2" size="3">
+                        <option>one
+                            <option selected>two (default)
+                                <option>three
+                    </select>
+                   
+                </div>
+                <div class="row flexform-group">
+                    <label class="_3 _12 flexform-labelAdjacent-right" for="f99">Submit button:</label>
+                    <input class="_8 _12" id="f99" type="submit" name="submit" value="submit">
+                </div>
+
+                <div class="row flexform-group">
+                    <label class="_3 _12 flexform-labelAdjacent-right">Time</label>
+                    <input class="_8 _12" type="time">
+                </div>
+                <div class="row flexform-group">
+                    <label class="_3 _12 flexform-labelAdjacent-right">URL</label>
+                    <input class="_8 _12" type="url">
+                </div>
+                <div class="row flexform-group">
+                    <label class="_3 _12 flexform-labelAdjacent-right">Week</label>
+                    <input class="_8 _12" type="week">
+                </div>
+
+                <div class="row flexform-group">
+                    <label class="_3 _12 flexform-labelAdjacent-right">Data List</label>
+                    <input class="_8 _12" list="browsers" name="browser">
+                    <datalist id="browsers">
+                        <option value="Internet Explorer">
+                            <option value="Firefox">
+                                <option value="Chrome">
+                                    <option value="Opera">
+                                        <option value="Safari">
+                    </datalist>
+                </div>
+                <div class="row flexform-group">
+                    <label class="_3 _12 flexform-labelAdjacent-right">KeyGen</label>
+                    <keygen class="_8 _12">
+                </div>
+                <div class="row flexform-group">
+                    <label class="_3 _12 flexform-labelAdjacent-right">Output</label>
+                    <output class="_8 _12"></output>
+                </div>
+            </form>
+<!--        </div>-->
+    </div>
+    
+    <br><hr><br>
+
+
+    <!--
+    <div>
+        <label > Button outside of <code>form</code> tag: </label>
+        <button >Hello</button>
+    </div>
+-->
+
+    
+<!--
+    <form class="flexform-horizontal">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-3 flexform-labelAdjacent-right">Email</label>
+            <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-3 flexform-labelAdjacent-right">Password</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-9">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-9">
+                <button type="submit" class="btn btn-default">Sign in</button>
+            </div>
+        </div>
+    </form>
+-->
+<!--
+
+               It does not address style illustrate styling For this template there is very limited styling applied to "coordinate" the positioning/alignment BETWEEN form labels and their associated form element (i.e., button, text input, textarea, listbox, etc.). With this template that positioning styling is left to the implementor. That said there are two additional templates (described below) provided with the Flex Framework that offers more "positioning/alignment" styling that address the two primary form layout styles: <em>"Stacked Forms"</em> (i.e., label is immediately above form input element) and <em>"Horizontal Forms"</em> (i.e., labels are adjacent to form input element labels are right aligned with appropriate spacing between the label and it's associated form element).
+               
+               More advanced styling options (via classes) to facilitate creating different form types (e.g., "Vertical Forms" and "Horizontal Forms") and other value add form features are available and demonstrated in other templates below.  
+
+
+-->
+
+
+</body>
+
+</html>
